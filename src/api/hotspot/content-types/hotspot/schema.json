@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotspots",
+  "info": {
+    "singularName": "hotspot",
+    "pluralName": "hotspots",
+    "displayName": "Hotspot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "full_story": {
+      "type": "blocks"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location_lat": {
+      "type": "decimal"
+    },
+    "location_lng": {
+      "type": "decimal"
+    },
+    "access_level": {
+      "type": "enumeration",
+      "enum": [
+        "free",
+        "premium"
+      ]
+    }
+  }
+}
